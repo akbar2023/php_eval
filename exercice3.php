@@ -85,7 +85,7 @@ if (!empty($_POST)) {
         if ($req) {
             $contenu .= '<div>Le film à bien été ajouté</div>';
         } else {
-            $contenu .= '<div>Une erreur est survenue lors de l\'eregistrement de votre film.</div>';
+            $contenu .= '<div>Une erreur est survenue lors de l\'enregistrement de votre film.</div>';
         }
     
     } // fin empty $contenu
@@ -114,7 +114,7 @@ if (!empty($_POST)) {
 
 <?php echo $contenu; ?>
 
-<form action="" method"post">
+<form action="" method="post">
 
     <div>
         <label for="titre">Titre :</label><br>
@@ -137,7 +137,7 @@ if (!empty($_POST)) {
         <select name="annee_de_realisation" id="annee_de_realisation">
             <?php
                 for($i=1900;$i<=2018;$i++) {
-                    echo "<option>$i</option>";
+                    echo '<option value="'.$i.'">' .$i. '</option>';
                 }
             ?>
         </select>
@@ -177,6 +177,7 @@ if (!empty($_POST)) {
     </div>
 
 </form>
+
     
 </body>
 </html>
